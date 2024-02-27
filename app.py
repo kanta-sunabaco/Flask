@@ -41,6 +41,21 @@ def add_post():
     c.close()
     return render_template("add.html")
 
+@app.route("/list")
+def list_get():
+    con=sqlite3.connect("myTask.db")
+    # 3.データベースを操作するための準備
+    c=con.cursor()
+    # 4.SQLを実行してDBにデータを送る
+    c.execute("SELECT id,task FROM tasks;")
+    # 6.データベースの接続を終了する
+    task_list=[]
+    for row in c.fetchall():
+        print(row)
+        task_list.append({"id":row[0],"task":row[1]})
+        print(task_list)
+    c.close()
+    return render_template("list.html",task_list=task_list)
 
 
 
