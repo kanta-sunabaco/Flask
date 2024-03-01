@@ -159,3 +159,21 @@ input {
     color: #ffffff;
     font-size: 14px;
 }
+
+/* index.html */
+
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    background: url("../img/background.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.task-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+}

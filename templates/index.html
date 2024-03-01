@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>{{name}}さん、こんにちは！</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <main>
+        <div class="background">
+            <div class="container">
+                <a href="/login" class="btn btn-primary">ログイン</a>
+                <a href="/regist" class="btn btn-secondary">新規登録</a>
+            </div>
+        </div>
+    </main>
+{% endblock %}
